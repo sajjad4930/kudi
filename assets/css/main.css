@@ -1,0 +1,1298 @@
+/* ----------------------------------
+
+Name: main.css
+Version: 1.0
+
+-------------------------------------
+
+Table of contents
+        
+    01. Navbar
+    02. Slider
+    03. About Us
+    04. Some Facts
+    05. Services
+    06. Get Started
+    07. Portfolio
+    08. Our Team
+    09. Testimonials
+    10. Pricing
+    11. Want Work
+    12. Blog
+    13. Clients
+    14. Contact
+    15. Footer
+    16. Page Loading
+    17. Media Query
+*/
+
+body {
+    font-family: 'Rubik', sans-serif;
+    height: 5000px;
+}
+
+/*--------------------------------------------------
+[1. Start Navbar]
+--------------------------------------------------*/
+.navbar {
+    background: linear-gradient(135deg, rgba(42, 36, 43, 0) 0%, rgba(42, 36, 43, 0) 100%);
+    padding: 20px 0;
+    border-bottom: 3px double rgba(255, 255, 255, 0.06);
+}
+
+.navbar .nav-item {
+    margin-left: 25px;
+    
+}
+
+.navbar .nav-item .nav-link {
+    padding: 0;
+    padding-left: 25px;
+    margin: 0;
+    border-left: .5px solid rgba(255, 255, 255, 0.06);
+    font-size: 14px;
+    color: #c7d3dd;
+    font-weight: 500;
+    transition: all .4s ease-in-out;
+}
+
+.navbar .nav-item .no-border {
+    border: 0;
+}
+
+.navbar .nav-item .nav-link:hover {
+    color: #2AAFC0;
+}
+
+.navbar .navbar-nav .dropdown .dropdown-menu {
+    margin-top: 25px;
+    background: #142a32;
+}
+
+.navbar .navbar-nav .dropdown span {
+    font-size: 10px;
+    margin-left: 3px;
+}
+
+.navbar .navbar-nav .dropdown .dropdown-menu a {
+    font-size: 14px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.navbar .navbar-nav .dropdown .dropdown-menu a:hover {
+    background: #13b1c5;
+}
+
+
+/*--------------------------------------------------
+[2. Start Slider]
+--------------------------------------------------*/
+.slider {
+    background: url('../img/bg/slider.png') center center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    position: relative;
+}
+
+.slider .content {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.slider .content h1 {
+    font-size: 60px;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+    margin-top: 70px;
+}
+
+.slider .content p {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+    color: #eeeeee;
+    word-spacing: 2px;
+    padding: 0;
+    margin: 5px 0 25px 0;
+}
+
+.slider .content .btn {
+    padding: 10px 40px;
+    border-radius: 35px;
+    font-size: 14px;
+    font-weight: 300;
+    background: #2AAFC0;
+    color: #ffffff;
+    margin: 0;
+    border: 1px solid #2AAFC0;
+    transition: all .6s ease-in-out;
+}
+
+.slider .content .btn:hover {
+    background: transparent;
+    border: 1px solid #fff;
+}
+  
+
+/*--------------------------------------------------
+[3. Start About]
+--------------------------------------------------*/
+
+.about-us {
+    padding: 130px 0 100px 0;
+}
+
+
+.about-us .heading i {
+    font-size: 30px;
+    color: #2AAFC0;
+    margin-bottom: 20px;
+}
+
+.about-us .heading h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.about-us .heading h2 span {
+    color: #2AAFC0;
+}
+
+.about-us .heading p {
+    font-size: 15px;
+    font-weight: 400;
+    color: #999;
+    line-height: 1.8;
+    margin: 0;
+    margin-bottom: 60px;
+}
+
+.about-us .box {
+    padding: 40px 30px;
+    border: 1px solid #eeeded;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.about-us .box .line {
+    width: 30px;
+    height: 2px;
+    background: #2AAFC0;
+    
+}
+
+.about-us .box .icon {
+    font-size: 40px;
+    color: #2AAFC0;
+    margin-bottom: 30px;
+}
+
+.about-us .box h3 {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0;
+    color: #212529;
+    margin: 20px 0 10px 0;
+}
+
+.about-us .box p {
+    font-size: 15px;
+    font-weight: 400;
+    color: #999;
+    line-height: 1.8;
+}
+
+
+/*--------------------------------------------------
+[4. Start Some Fact]
+--------------------------------------------------*/
+
+.some-facts {
+    background: url('../img/bg/some-bg.png') center center no-repeat;
+    background-size: cover;
+    color: #fff;
+    padding: 130px 0;
+}
+
+.some-facts .items .icon {
+    color: #2AAFC0;
+    font-size: 40px;
+}
+
+.some-facts .items .counter {
+    font-size: 35px;
+    font-weight: 600;
+    margin: 30px 0;
+}
+
+.some-facts .items .line {
+    width: 30px;
+    height: 2px;
+    background: #2AAFC0;
+    margin-bottom: 10px;
+}
+
+.some-facts .items h4 {
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+}
+
+/*--------------------------------------------------
+[5. Start Services]
+--------------------------------------------------*/
+.services {
+    padding: 130px 0 100px 0;
+}
+
+.services .heading .icon {
+    font-size: 30px;
+    color: #2AAFC0;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.services .heading h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.services .heading h2 span {
+    color: #2AAFC0;
+}
+
+.services .heading p {
+    font-size: 15px;
+    font-weight: 400;
+    color: #999;
+    line-height: 1.8;
+    margin: 0;
+    margin-bottom: 60px;
+}
+
+.services .box {
+    padding: 20px 15px;
+    border-radius: 15px;
+    border: 1px solid #eeeeee;
+    margin-bottom: 30px;
+}
+
+.services .box .icon {
+    font-size: 30px;
+    color: #2AAFC0;
+}
+
+.services .box h3 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.services .box p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #999;
+    line-height: 1.8;
+    margin: 0;
+}
+
+
+
+/*--------------------------------------------------
+[6. Start Get Started]
+--------------------------------------------------*/
+.get-started {
+    padding: 130px 0;
+    background: url('../img/bg/get-started.png') center center no-repeat;
+    background-size: cover;
+}
+
+.get-started .content .icon {
+    font-size: 40px;
+    color: #2AAFC0;
+}
+
+.get-started .content h2 {
+    font-size: 25px;
+    font-weight: 600;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+}
+
+.get-started .content p {
+    font-size: 15px;
+    font-weight: 300;
+    color: #eeeeee;
+    line-height: 1.6;
+    padding: 0;
+    margin: 10px 0 25px 0;
+}
+
+.get-started .content .btn {
+    padding: 10px 30px;
+    border-radius: 35px;
+    font-size: 14px;
+    font-weight: 300;
+    background: #2AAFC0;
+    color: #ffffff;
+    margin: 0;
+    border: 1px solid #2AAFC0;
+    transition: all .6s ease-in-out;
+}
+
+.get-started .content .btn:hover {
+    background: transparent;
+    border: 1px solid #fff;
+}
+
+
+/*--------------------------------------------------
+[7. Start Portfolio]
+--------------------------------------------------*/
+
+.portfolio {
+    padding: 130px 0 100px 0;
+    background: #ececec;
+}
+
+.portfolio .heading .icon {
+    font-size: 30px;
+    color: #2AAFC0;
+    margin-bottom: 20px;
+}
+
+.portfolio .heading h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.portfolio .heading h2 span {
+    color: #2AAFC0;
+}
+
+.portfolio .heading p {
+    font-size: 15px;
+    font-weight: 400;
+    color: #999;
+    line-height: 1.8;
+    margin: 0;
+    margin-bottom: 60px;
+}
+
+.portfolio .button-group {
+    margin-bottom: 30px;
+    border-top: 1px solid #dfdede;
+    border-bottom: 1px solid #dfdede;
+    width: 40%;
+    padding: 10px 0;
+}
+
+.portfolio .button-group button {
+    border: 0;
+    background: transparent;
+    font-size: 15px;
+    font-weight: 400;
+    margin-right: 10px;
+    color: #666;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 35px;
+    transition: all .2s ease-in-out;
+}
+
+.portfolio .button-group button:hover {
+    color: #ffffff;
+    background: #2AAFC0;
+}
+
+.portfolio .button-group button.active {
+    color: #ffffff;
+    background: #2AAFC0;
+}
+
+.portfolio .single-portfolio-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.portfolio .single-portfolio-item .overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: #2AAFC0;
+    color: #ffffff;
+    opacity: 0;
+    transition: all .7s ease-in-out;
+}
+
+.portfolio .single-portfolio-item .overlay .content {
+    font-size: 20px;
+    position: absolute;
+    text-decoration: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #ffffff;
+    transition: all .3s ease-in-out;
+    
+}
+
+.portfolio .single-portfolio-item .overlay .content h3 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.portfolio .single-portfolio-item .overlay .content p {
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.portfolio .single-portfolio-item .overlay .content a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.portfolio .single-portfolio-item:hover .overlay {
+    opacity: .95;
+}
+
+.portfolio .grid {
+    margin-top: 40px;
+}
+
+
+
+/*--------------------------------------------------
+[8. Start Our Team]
+--------------------------------------------------*/
+.our-team {
+    padding: 130px 0;
+}
+
+.our-team .heading .icon {
+    font-size: 30px;
+    color: #2AAFC0;
+    margin-bottom: 20px;
+}
+
+.our-team .heading h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.our-team .heading h2 span {
+    color: #2AAFC0;
+}
+
+.our-team .heading p {
+    font-size: 15px;
+    font-weight: 400;
+    color: #999;
+    line-height: 1.8;
+    margin: 0;
+    margin-bottom: 60px;
+}
+
+.our-team .box .image {
+    position: relative;
+}
+
+.our-team .box .image .social-icons {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffffff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: #818081 !important;
+    opacity: 0;
+    transition: all .4s ease-in-out;
+}
+
+.our-team .box .image .social-icons i {
+    font-size: 16px;
+    padding: 0 5px;
+}
+
+.our-team .box:hover .social-icons {
+    opacity: 1;
+    bottom: 40px;
+}
+
+.our-team .box .info {
+    border-bottom: 2px solid #2AAFC0;
+    border-radius: 10px;
+}
+.our-team .box .info h3 {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0;
+    margin: 30px 0 5px 0;
+}
+
+.our-team .box .info h4 {
+    font-size: 13px;
+    font-weight: 400;
+    color: #2AAFC0;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+
+/*--------------------------------------------------
+[9. Start Testimonials]
+--------------------------------------------------*/
+.testimonials {
+    background: url('../img/bg/testimonials.png') center center no-repeat;
+    background-size: cover;
+    padding: 130px 0 140px  0;
+    color: #fff;
+}
+
+.testimonials h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.testimonials p {
+    font-size: 15px;
+    font-weight: 300;
+    color: #eeeeee;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* Image */
+.testimonials .carousel-inner .carousel-item .colon {
+    margin: 0px 0 20px 0;
+}
+
+.testimonials .carousel-inner .carousel-item .team {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #2AAFC0;
+    border-radius: 100%;
+    padding: 5px;
+    margin: 20px 0 15px;
+}
+
+.testimonials .carousel-inner .carousel-item h3 {
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.testimonials .carousel-inner .carousel-item h4 {
+    font-size: 14px;
+    font-weight: 300;
+    color: #2AAFC0;
+    margin-bottom: 20px;
+}
+
+.testimonials .carousel-indicators {
+    bottom: -30px;
+}
+
+.testimonials .carousel-indicators li {
+    background-color: #b8b7b7;
+    border-radius: 30px;
+    height: 4px;
+    width: 40px;
+}
+
+
+.testimonials .carousel-indicators .active {
+    background-color: #ffffff;
+}
+
+.testimonials .icon {
+  height: 40px;
+  width: 40px;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  font-size: 30px;
+  background-image: none;
+  color: #ffffff
+}
+
+
+/*--------------------------------------------------
+[10. Start Pricing]
+--------------------------------------------------*/
+.price {
+    padding: 130px 0;
+    background: #f9f9f9;
+}
+
+.price .heading .icon {
+    font-size: 30px;
+    color: #2AAFC0;
+    margin-bottom: 20px;
+}
+
+.price .heading h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.price .heading h2 span {
+    color: #2AAFC0;
+}
+
+.price .heading p {
+    font-size: 15px;
+    font-weight: 400;
+    color: #999;
+    line-height: 1.8;
+    margin: 0;
+    margin-bottom: 60px;
+}
+
+.price .box {
+    border: 1px solid #fff;;
+    border-radius: 7px;
+    background: #fff;
+    box-shadow: 0px 15px 40px -5px rgba(0, 0, 0, 0.1);
+}
+
+.price .standard .head h3 {
+    color: #fff;
+}
+
+.price .standard .line {
+    background: #ffffff;
+    width: 60px;
+    height: 3px;
+}
+
+.price .head {
+    margin: 40px 0 10px 0;
+}
+
+.price .head h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+
+.price .box .line {
+    width: 60px;
+    height: 3px;
+    background: #2AAFC0;
+}
+
+.price .box .num {
+    margin-top: 30px;
+}
+
+.price .box .num h4 {
+    font-size: 50px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+
+.price .box .num h4 span {
+    font-size: 15px;
+    color: #555;
+    font-weight: 300;
+}
+
+.price .box .body {
+    margin-bottom: 30px;
+}
+
+.price .box .body ul {
+    margin: 0;
+    padding: 0;
+    margin: 20px 0;
+    list-style: none;
+}
+
+.price .box .body ul li {
+    font-size: 14px;
+    font-weight: 300;
+    color: #999999;
+    margin-top: 10px;
+}
+
+.price .box .btn {
+    padding: 10px 30px;
+    border-radius: 35px;
+    font-size: 14px;
+    font-weight: 300;
+    background: #2AAFC0;
+    color: #ffffff;
+    margin: 0;
+    border: 1px solid #2AAFC0;
+    margin-bottom: 40px;
+    box-shadow: 0px 15px 40px -5px rgba(0, 0, 0, 0.1);
+    transition: all .6s ease-in-out;
+}
+
+.price .box .btn:hover {
+    background: transparent;
+    border: 1px solid #757575;
+    color: #757575
+}
+
+/* Starndard */
+.price .standard {
+    background: linear-gradient(135deg, #03859c 0%,#2aafc0 100%); 
+    color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0);
+    box-shadow: 0px 20px 40px -10px rgba(0, 0, 0, 0.5);
+}
+
+.price .standard .head h3 {
+    color: #fff;
+}
+
+.price .standard .line {
+    background: #ffffff;
+    width: 60px;
+    height: 3px;
+}
+
+.price .standard .num h4 span {
+    color: #ffffff;
+}
+
+.price .standard .body ul li {
+    color: #ffffff;
+}
+
+.price .standard .btn {
+    background: #ffffff;
+    color: #08707e;
+}
+
+.price .standard .btn:hover {
+    background: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff
+}
+
+
+/*--------------------------------------------------
+[11. Start Want Work]
+--------------------------------------------------*/
+.want-work {
+    padding: 130px 0;
+    background: url('../img/bg/some-bg.png') center center no-repeat;
+    background-size: cover;
+}
+
+.want-work .content .icon {
+    font-size: 40px;
+    color: #2AAFC0;
+}
+
+.want-work .content h2 {
+    font-size: 25px;
+    font-weight: 600;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+}
+
+.want-work .content p {
+    font-size: 15px;
+    font-weight: 300;
+    color: #eeeeee;
+    line-height: 1.6;
+    padding: 0;
+    margin: 10px 0 25px 0;
+}
+
+.want-work .content .btn {
+    padding: 10px 30px;
+    border-radius: 35px;
+    font-size: 14px;
+    font-weight: 400;
+    background: #2AAFC0;
+    color: #ffffff;
+    margin: 0;
+    border: 1px solid #2AAFC0;
+    transition: all .6s ease-in-out;
+}
+
+.want-work .content .btn:hover {
+    background: transparent;
+    border: 1px solid #fff;
+}
+
+
+
+/*--------------------------------------------------
+[12. Start Blog]
+--------------------------------------------------*/
+.blog {
+    padding: 130px 0;
+}
+
+.blog .heading .icon {
+    font-size: 30px;
+    color: #2AAFC0;
+    margin-bottom: 20px;
+}
+
+.blog .heading h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.blog .heading h2 span {
+    color: #2AAFC0;
+}
+
+.blog .heading p {
+    font-size: 15px;
+    font-weight: 400;
+    color: #999;
+    line-height: 1.8;
+    margin: 0;
+    margin-bottom: 60px;
+}
+
+.blog .box {
+    border: 1px solid #e6e4e4;
+    border-radius: 5px;
+}
+
+.blog .box .info {
+    padding: 20px 15px;
+}
+
+.blog .box .info span {
+    font-size: 13px;
+    font-weight: 400;
+    color: #999999;
+}
+
+.blog .box .info h3 {
+    font-size: 18px;
+    margin: 7px 0;
+    padding: 0;
+    font-weight: 500;
+}
+
+.blog .box .info .link {
+    font-size: 13px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #2AAFC0;
+}
+
+
+/*--------------------------------------------------
+[3. Start Clients]
+--------------------------------------------------*/
+.clients {
+    padding: 130px 0;
+    background: url('../img/bg/get-started.png') center center no-repeat;
+    background-size: cover;
+}
+
+.clients img {
+    opacity: .4;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+.clients img:hover {
+    opacity: 1;
+}
+
+
+
+/*--------------------------------------------------
+[14. Start Contact us]
+--------------------------------------------------*/
+.contact {
+    padding: 130px 0;
+}
+
+.contact .heading .icon {
+    font-size: 30px;
+    color: #2AAFC0;
+    margin-bottom: 20px;
+}
+
+.contact .heading h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.contact .heading h2 span {
+    color: #2AAFC0;
+}
+
+.contact .heading p {
+    font-size: 15px;
+    font-weight: 400;
+    color: #999;
+    line-height: 1.8;
+    margin: 0;
+    margin-bottom: 60px;
+}
+
+.contact .form-control {
+    padding: 25px;
+    font-size: 13px;
+    margin-bottom: 10px;
+    background: #f9f9f9;
+    border: 0;
+    border-radius: 10px;
+}
+
+.contact button.btn {
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    background: #2AAFC0;
+    color: #ffffff;
+}
+
+.contact .title h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.contact .title p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #999;
+    line-height: 1.6;
+    margin: 0;
+    margin-bottom: 40px;
+}
+
+.contact .content .info {
+    margin-top: 30px;
+}
+
+.contact .content .info .icon {
+    font-size: 30px;
+    padding: 0;
+    margin: 0;
+    color: #02434b;
+    margin-right: 20px;
+}
+
+.contact .content .info h4 {
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.contact .content .info h4 span {
+    font-size: 13px;
+    font-weight: 300;
+    color: #999999;
+}
+
+
+/*--------------------------------------------------
+[15. Start Footer]
+--------------------------------------------------*/
+.footer {
+    padding: 80px 0;
+    background: url('../img/bg/footer.png') center center no-repeat;
+    background-size: cover;
+}
+
+.footer .social-icons {
+    margin: 30px 0;
+    padding: 0;
+}
+
+.footer .social-icons a {
+    text-decoration: none;
+}
+
+.footer .social-icons i {
+    font-size: 15px;
+    line-height: 42px;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    background: #2AAFC0;
+    border-radius: 50%;
+    margin: 0 3px;
+    transition: all .5s ease-in-out;
+}
+
+.footer .social-icons i:hover {
+    background: #02434b;
+}
+
+.footer p {
+    font-size: 14px;
+    font-weight: 300;
+    color: #cacaca;
+    margin: 0;
+    padding: 0;
+}
+
+/*--------------------------------------------------
+[16. Start Page Loading]
+--------------------------------------------------*/
+.no-js #loader {
+     display: none; 
+     }
+
+.js #loader {
+     display: block; position: absolute; left: 100px; top: 0;
+     }
+
+.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url(../img/loader/Preloader_2.gif) center no-repeat #fff;
+}
+
+
+
+
+/*--------------------------------------------------
+[17. Start Media Query]
+--------------------------------------------------*/
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    /* Navbar */
+    .navbar {
+        padding: 20px;
+        background: #21353e !important;
+    }
+    .navbar .nav-item {
+        margin-left: 0;
+        
+    }
+    .navbar .nav-item .nav-link {
+        padding: 0;
+        margin: 25px 0  0;
+    }
+
+    /* Slider */
+    .slider .content {
+        padding: 0 30px;
+    }
+
+    /* Some Facts */
+    .some-facts {
+        padding: 105px 0;
+    }
+    .some-facts .items {
+        margin: 25px 0;
+    }
+
+    /* Services */
+    .services {
+        padding: 130px 0;
+    }
+
+    /* Portfolio */
+    .portfolio .button-group {
+        width: 100%;
+    }
+
+    /* Our Team */
+    .our-team {
+        padding: 130px 0 100px 0;
+    }
+    .our-team .box {
+        margin-bottom: 30px;
+    }
+
+    /* Pricing */
+    .price {
+        padding: 130px 0 100px 0;
+    }
+    .price .box {
+        margin-bottom: 30px;
+    }
+
+    /* Blog */
+    .blog {
+        padding: 130px 0 100px 0;
+    }
+    .blog .box {
+        margin-bottom: 30px;
+    }
+
+    /* Clients */
+    .clients {
+        padding: 130px 0 100px 0;
+    }
+    .clients img {
+        margin-bottom: 30px;
+    }
+
+    /* Contact Us */
+    .contact .content {
+        margin-bottom: 30px;
+    }
+}
+
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    .navbar {
+        padding: 20px;
+        background: #21353e !important;
+    }
+    .navbar .nav-item {
+        margin-left: 0;
+        
+    }
+    .navbar .nav-item .nav-link {
+        padding: 0;
+        margin: 25px 0  0;
+    }
+
+    /* Some Facts */
+    .some-facts {
+        padding: 105px 0;
+    }
+    .some-facts .items {
+        margin: 25px 0;
+    }
+
+    /* Services */
+    .services {
+        padding: 130px 0;
+    }
+
+    /* Portfolio */
+    .portfolio .button-group {
+        width: 100%;
+    }
+
+    /* Our Team */
+    .our-team {
+        padding: 130px 0 100px 0;
+    }
+    .our-team .box {
+        margin-bottom: 30px;
+    }
+
+    /* Pricing */
+    .price {
+        padding: 130px 0 100px 0;
+    }
+    .price .box {
+        margin-bottom: 30px;
+    }
+
+    /* Blog */
+    .blog {
+        padding: 130px 0 100px 0;
+    }
+    .blog .box {
+        margin-bottom: 30px;
+    }
+
+    /* Clients */
+    .clients {
+        padding: 130px 0 100px 0;
+    }
+    .clients img {
+        margin-bottom: 30px;
+    }
+
+    /* Contact Us */
+    .contact .content {
+        margin-bottom: 30px;
+    }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+    .navbar {
+        padding: 20px;
+        background: #21353e !important;
+    }
+    .navbar .nav-item {
+        margin-left: 0;
+        
+    }
+    .navbar .nav-item .nav-link {
+        padding: 0;
+        margin: 25px 0  0;
+    }
+
+    /* Some Facts */
+    .some-facts {
+        padding: 105px 0;
+    }
+    .some-facts .items {
+        margin: 25px 0;
+    }
+
+    /* Portfolio */
+    .portfolio .button-group {
+        width: 100%;
+    }
+
+    /* Pricing */
+    .price {
+        padding: 130px 0 100px 0;
+    }
+    .price .box {
+        margin-bottom: 30px;
+    }
+
+}
+
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+    /* Portfolio */
+    .portfolio .button-group {
+        width: 100%;
+    }
+}
