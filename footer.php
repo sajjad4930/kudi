@@ -11,24 +11,52 @@
 
 ?>
 
-	</div><!-- #content -->
+        <!-- ==== Start Footer ==== -->
+        <footer class="footer">
+            <div class="container text-center">
+                <div class="logo">
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'kudi' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'kudi' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'kudi' ), 'kudi', '<a href="https://sajjadhossain.me">Masud Rana</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+
+										
+										<?php $logofooter=get_theme_mod('footer_logo');?>
+								<?php if ($logofooter) { ?>
+								<img src="<?php echo $logofooter; ?>" alt="<?php bloginfo( 'name' ); ?>">	
+
+								<?php } else { ?>
+                        <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+                        <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+										<?php } ?>
+
+                </div>
+                <div class="social-icons">
+
+												<?php if (get_theme_mod('facebook')) : ?>
+												<a href="<?php echo get_theme_mod('facebook');?>">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+										</a>												
+                        <?php	else : ?>
+												<?php endif ;?>
+												
+         
+
+                    <a href="#0">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                    <a href="#0">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                    <a href="#0">
+                        <i class="fa fa-behance" aria-hidden="true"></i>
+                    </a>
+                    <a href="#0">
+                        <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <p>© 2018 Brex-Theme. ALL Right Reserved.</p>
+            </div>
+				</footer>
+				
+				<!-- ==== End Footer ==== -->
 
 <?php wp_footer(); ?>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
