@@ -5,12 +5,11 @@ function kudi_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
-
 }
 }
 add_action( 'customize_register', 'kudi_customize_register' );
 
- // dfsd 
+ // Custom section
 
  if ( ! function_exists( 'profectis_customize_register' ) ) {
 
@@ -46,7 +45,7 @@ add_action( 'customize_register', 'kudi_customize_register' );
 
 			)));
 
-		
+			// Theme Footer  settigs
 			$wp_customize->add_section( 'footer_option', array(
 				'title'       => __( 'Footer', 'kudi' ),
 				'description'       => __( 'Theme footer option', 'kudi' ),
@@ -118,6 +117,15 @@ $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'pinterest'
 	'label' => __( 'Pinterest', 'kudi' ),
 	'section' => 'footer_option',
 	'settings' => 'pinterest',
+	'type' => 'text'
+) ) );
+
+// Add behance Setting
+$wp_customize->add_setting( 'behance' , array( 'default' => 'https://www.behance.com' ));
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'pinterest', array(
+	'label' => __( 'behance', 'kudi' ),
+	'section' => 'footer_option',
+	'settings' => 'behance',
 	'type' => 'text'
 ) ) );
 

@@ -5,10 +5,6 @@
   */
   get_header();
   ?>
-
-
-
-
         <!-- ==== Start Slider ==== -->
         <section class="slider" id="slider">
             <div class="content text-center">
