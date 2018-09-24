@@ -35,3 +35,59 @@ function kudi_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'kudi_pingback_header' );
+
+
+if(function_exists('vc_map')){
+ // Slider vc addons
+	vc_map( array(
+		'name' => __('Kudi Slider Home','kudi'),
+		'base' => 'kudi-slider',
+    'category' => __( 'Kudi Theme', 'craiglistmarketingpro' ),     
+		'icon' => 'icon-wpb-wp',
+		
+		'params' => array(
+			array(
+				'type' => 'textfield',
+				'param_name' => 'title',
+				'value' => '',
+				'heading' => 'Slider Title'
+			),
+			
+			array(
+				'type' => 'textarea',
+				'param_name' => 'description',
+				'value' => '',
+				'heading' => 'Slider Descriptin'
+			),
+			
+      array(
+				'type' => 'textfield',
+				'param_name' => 'buttonlink',
+				'value' => '',
+				'heading' => 'Slider Button Link'
+			),
+			array(
+				'type' => 'textfield',
+				'param_name' => 'buttontext',
+				'value' => '',
+				'heading' => 'Slider Button Text'
+			),
+
+			array(
+				'type' => 'attach_image',
+				'param_name' => 'bcimage',
+				'value' => '',
+				'heading' => 'Upload Section Background image'
+			),
+
+
+			
+			
+
+
+		)
+
+	));
+
+
+}

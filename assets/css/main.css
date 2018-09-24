@@ -89,7 +89,7 @@ body {
 [2. Start Slider]
 --------------------------------------------------*/
 .slider {
-    background: url('../img/bg/slider.png') center center no-repeat;
+    
     background-size: cover;
     background-attachment: fixed;
     height: 100vh;

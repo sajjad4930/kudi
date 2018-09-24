@@ -5,19 +5,16 @@
   */
   get_header();
   ?>
-        <!-- ==== Start Slider ==== -->
-        <section class="slider" id="slider">
-            <div class="content text-center">
-                <h1>Big Design Agency</h1>
-                <p>We are a passionate digital design agency that specializes in beautiful and
-                    easy-to-use digital design &
-                    <br>
-                    web development services.
-                </p>
-                <a href="#0" class="btn">Get Started</a>
-            </div>
-        </section>
-        <!-- ==== End Slider ==== -->
+
+<?php
+
+while ( have_posts() ) : the_post();
+
+the_content();
+
+endwhile; 
+
+?>
 
         <!-- ==== Start About Us ==== -->
         <section class="about-us" id="about">
