@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+
     "use strict";
 
     // Show Navbar background on scroll
@@ -18,7 +19,8 @@ $(document).ready(function(){
      });
 
 
-
+     
+   
      // Animate loader off screen
     $('.se-pre-con').fadeOut('slow');
 

@@ -29,3 +29,92 @@ extract( shortcode_atts(array(
 
 <?php return ob_get_clean();
 });
+
+
+
+// testimonial
+
+add_shortcode('testimonial', function($attr, $content){
+	ob_start(); 
+extract( shortcode_atts(array(
+	'title' => 'Testimonials',	          
+          
+	
+
+), $attr) );
+?>
+
+ <!-- ==== Start Testimonials ==== -->
+ <section class="testimonials" id="testimonials">
+            <div class="container text-center">
+                <h2><?php echo $title?></h2>
+                <div class="row text-center">
+                    <div class="col-md-12">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators-->
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            </ol>
+
+                            <div class="carousel-inner">
+
+<?php   $args = array(
+     'post_type' => 'testimonial',
+      'posts_per_page' => -1
+     );
+
+$loop = new WP_Query( $args );
+
+while ( $loop->have_posts() ) : $loop->the_post(); ?>
+
+<div class="carousel-item active text-center">
+    <img src="img/testimonials.png" alt="" class="colon">
+    <p><?php the_content();?></p>
+
+    <?php if ( has_post_thumbnail() ) {
+the_post_thumbnail( 'post-testimonial', array(
+     'class'  => 'center-block team',
+      'id'    => 'customid'
+     
+     ) );
+}  ?>
+    <h3><?php the_title();?></h3>
+
+    <h4>Front End Developer</h4>
+
+</div>
+
+<?php   endwhile; ?>
+
+
+                            </div>
+                            <a
+                                class="carousel-control-prev"
+                                href="#carouselExampleIndicators"
+                                role="button"
+                                data-slide="prev">
+                                <span class="fa fa-angle-left icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a
+                                class="carousel-control-next"
+                                href="#carouselExampleIndicators"
+                                role="button"
+                                data-slide="next">
+                                <span class="fa fa-angle-right icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ==== End Testimonials ==== -->
+
+
+
+<?php return ob_get_clean();
+});
+

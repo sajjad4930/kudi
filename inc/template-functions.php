@@ -80,14 +80,62 @@ if(function_exists('vc_map')){
 				'heading' => 'Upload Section Background image'
 			),
 
+		)
 
-			
-			
+	));
 
+	 // Testimonial 
+	 vc_map( array(
+		'name' => __('Testimonial','kudi'),
+		'base' => 'testimonial',
+    'category' => __( 'Kudi Theme', 'kudi' ),     
+		'icon' => 'icon-wpb-wp',
+		
+		'params' => array(
+			array(
+				'type' => 'textfield',
+				'param_name' => 'title',
+				'value' => '',
+				'heading' => 'Testimonial Title'
+			),
+			
 
 		)
 
 	));
 
+}
 
+
+/*
+ * testimonial custom post.
+ */
+add_action('init', 'kudi_testimonial');
+function kudi_testimonial() 
+{
+  $labels = array(
+    'name' => _x('Testimonial', 'kudi'),
+    'singular_name' => __('Testimonial', 'kudi'),
+    'add_new' => _x('Add New', 'kudi'),
+    'add_new_item' => __('Add New Testimonial Item'),
+    'edit_item' => __('Edit Item'),
+    'new_item' => __('New Item'),
+    'view_item' => __('View Item'),
+    'search_items' => __('Search Items'),
+    'not_found' =>  __('No items found'),
+    'not_found_in_trash' => __('No items found in Trash'), 
+    'parent_item_colon' => ''
+  );
+  $args = array(
+    'labels' => $labels,
+    'public' => true,
+    'show_ui' => true, 
+    'query_var' => true,
+    'rewrite' => true,
+    'capability_type' => 'post',
+    'hierarchical' => false,
+    'menu_position' => 20,
+    'supports' => array('title','editor','thumbnail')
+  ); 
+  register_post_type('testimonial',$args);
 }
