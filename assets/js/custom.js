@@ -10,8 +10,7 @@
   
    $(document).ready(function(){
   
-    $('#testimonials').find('.carousel-item').first().addClass('active');
- 
+    //$('#testimonials').find('.carousel-item').first().addClass('active');
  
 
    });

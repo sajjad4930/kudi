@@ -51,23 +51,37 @@ extract( shortcode_atts(array(
                     <div class="col-md-12">
                         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                             <!-- Indicators-->
-                            <ol class="carousel-indicators">
-                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                            </ol>
-                            <div class="carousel-inner">
-
                             <?php   $args = array(
                                 'post_type' => 'testimonial',
                                 'posts_per_page' => -1
                                 );
+                                ?>
 
-                            $loop = new WP_Query( $args );
+                           <?php $loop = new WP_Query( $args ); ?>
 
-                            while ( $loop->have_posts() ) : $loop->the_post(); ?>
-
-                            <div class="carousel-item  text-center">
+                            <ol class="carousel-indicators">
+                            <?php
+                            for ($i = 0; $i < $loop->post_count; $i++) {
+                            if ($i == 0) {
+                            $class = 'active';
+                            } else {
+                            $class = '';
+                            }                        
+                            ?>
+                         <li data-target="#carouselExampleIndicators" data-slide-to="<?php echo $i; ?>" class="<?php echo $class; ?>"></li>
+                        <?php } ?>
+                               
+                            </ol>
+                            <div class="carousel-inner">
+                            <?php $count = 0; ?>
+                           <?php  while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                           <?php 
+                           $class = '';
+                           if ($count == 0) {
+                               $class = 'active';
+                           }
+                           ?>
+                            <div class="carousel-item  text-center <?php echo $class; ?>">
                             <?php $icontesti = wp_get_attachment_image_src($testimonialicon, 'full') ; ?>
                                 <img src="<?php echo $icontesti[0]; ?>" alt="" class="colon">
                                 <p><?php the_content();?></p>
@@ -79,15 +93,13 @@ extract( shortcode_atts(array(
                                 
                                 ) );
                             }  ?>
-                                <h3><?php the_title();?></h3>
-
-                               
-                                <h4><?php echo esc_attr( get_post_meta( get_the_ID(), 'hcf_author', true ) ); ?></h4>
+                                <h3><?php the_title();?></h3>                              
+                         // meta box field 
+                          <h4><?php echo esc_attr( get_post_meta( get_the_ID(), 'hcf_author', true ) ); ?></h4>
 
                             </div>
-
+                            <?php $count++;?>
                             <?php   endwhile; ?>
-
 
                             </div>
                             <a
@@ -113,8 +125,7 @@ extract( shortcode_atts(array(
         </section>
         <!-- ==== End Testimonials ==== -->
 
-
-
 <?php return ob_get_clean();
+
 });
 
