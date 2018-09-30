@@ -38,9 +38,8 @@ add_shortcode('testimonial', function($attr, $content){
 	ob_start(); 
 extract( shortcode_atts(array(
 	'title' => 'Testimonials',	          
+	'testimonialicon' => '',	          
           
-	
-
 ), $attr) );
 ?>
 
@@ -57,36 +56,37 @@ extract( shortcode_atts(array(
                                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                             </ol>
-
                             <div class="carousel-inner">
 
-<?php   $args = array(
-     'post_type' => 'testimonial',
-      'posts_per_page' => -1
-     );
+                            <?php   $args = array(
+                                'post_type' => 'testimonial',
+                                'posts_per_page' => -1
+                                );
 
-$loop = new WP_Query( $args );
+                            $loop = new WP_Query( $args );
 
-while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                            while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
-<div class="carousel-item active text-center">
-    <img src="img/testimonials.png" alt="" class="colon">
-    <p><?php the_content();?></p>
+                            <div class="carousel-item  text-center">
+                            <?php $icontesti = wp_get_attachment_image_src($testimonialicon, 'full') ; ?>
+                                <img src="<?php echo $icontesti[0]; ?>" alt="" class="colon">
+                                <p><?php the_content();?></p>
+                                
+                                <?php if ( has_post_thumbnail() ) {
+                            the_post_thumbnail( 'post-testimonial', array(
+                                'class'  => 'center-block team',
+                                'id'    => 'customid'
+                                
+                                ) );
+                            }  ?>
+                                <h3><?php the_title();?></h3>
 
-    <?php if ( has_post_thumbnail() ) {
-the_post_thumbnail( 'post-testimonial', array(
-     'class'  => 'center-block team',
-      'id'    => 'customid'
-     
-     ) );
-}  ?>
-    <h3><?php the_title();?></h3>
+                               
+                                <h4><?php echo esc_attr( get_post_meta( get_the_ID(), 'hcf_author', true ) ); ?></h4>
 
-    <h4>Front End Developer</h4>
+                            </div>
 
-</div>
-
-<?php   endwhile; ?>
+                            <?php   endwhile; ?>
 
 
                             </div>

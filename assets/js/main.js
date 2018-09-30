@@ -2,6 +2,8 @@ $(document).ready(function(){
 
 
     "use strict";
+   
+
 
     // Show Navbar background on scroll
     $(window).scroll(function(){
