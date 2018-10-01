@@ -94,8 +94,9 @@ extract( shortcode_atts(array(
                                 ) );
                             }  ?>
                                 <h3><?php the_title();?></h3>                              
-                         // meta box field 
+                       
                           <h4><?php echo esc_attr( get_post_meta( get_the_ID(), 'hcf_author', true ) ); ?></h4>
+                          <p><?php echo esc_attr( get_post_meta( get_the_ID(), 'hcf_des', true ) ); ?></p>
 
                             </div>
                             <?php $count++;?>
