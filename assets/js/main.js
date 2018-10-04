@@ -1,9 +1,10 @@
-$(document).ready(function(){
 
+(function($){
+
+$(document).ready(function(){
 
     "use strict";
    
-
 
     // Show Navbar background on scroll
     $(window).scroll(function(){
@@ -20,9 +21,6 @@ $(document).ready(function(){
              }
      });
 
-
-     
-   
      // Animate loader off screen
     $('.se-pre-con').fadeOut('slow');
 
@@ -90,3 +88,6 @@ $(document).ready(function(){
 
 // Wow Animation Js
 new WOW().init();
+
+
+})(jQuery);

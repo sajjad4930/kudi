@@ -42,6 +42,7 @@ if ( ! function_exists( 'kudi_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 		add_image_size( 'post-testimonial', 600, 600, true );
+		add_image_size( 'post-portfolio', 1024, 1024, true );
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
@@ -167,6 +168,7 @@ require get_template_directory() . '/inc/template-tags.php';
  */
 require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/metabox.php';
+require get_template_directory() . '/inc/vc-function.php';
 
 /**
  * Customizer additions.

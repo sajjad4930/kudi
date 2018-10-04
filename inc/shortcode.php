@@ -130,3 +130,104 @@ extract( shortcode_atts(array(
 
 });
 
+// portfolio
+
+add_shortcode('portfolio', function($attr, $content){
+	ob_start(); 
+extract( shortcode_atts(array(
+	'title' => 'Portfolio',	          
+	'description' => '',	          
+		          
+          
+), $attr) );
+?>
+
+ <!-- ==== Start Portfolio ==== -->
+ <section class="portfolio" id="portfolio">
+            <div class="container text-center">
+                <div class="heading">
+                    <span class="icon icon-basic-pencil-ruler"></span>
+                    <h2><?php echo $title ; ?></h2>
+                    <p><?php echo $description ; ?></p>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="button-group filter-button-group text-center m-auto">
+
+                            <?php
+                                    $terms = get_terms('portfolio-categories');
+                                    $count = count($terms);
+                                        echo '<button data-filter="*" class="active">All</button>';
+                                    if ( $count > 0 ){
+                                        foreach ( $terms as $term ) {
+                                            $termname = strtolower($term->name);
+                                            $termname = str_replace(' ', '-', $termname);              
+                                            echo '<button data-filter=".'.$termname.'">'.$term->name.'</button>';
+                                        }
+                                    }
+                            ?> 
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row grid">
+                    <?php
+                    /* 
+                    Query the post 
+                    */
+                    global $post;
+                    $args = array( 'post_type' => 'portfolio', 'posts_per_page' => -1 );
+                    $kudi = new WP_Query( $args );
+
+
+                    while ( $kudi->have_posts() ) : $kudi->the_post(); 
+                                   
+                        /* 
+                        Pull category for each unique post using the ID 
+                        */
+                        $terms = get_the_terms( $post->ID, 'portfolio-categories' );	
+                        if ( $terms && ! is_wp_error( $terms ) ) : 
+                    
+                            $links = array();
+                    
+                            foreach ( $terms as $term ) {
+                                $links[] = $term->name;
+                            }
+                    
+                            $tax_links = join( " ", str_replace(' ', '-', $links));          
+                            $tax = strtolower($tax_links);
+                        else :	
+                        $tax = '';					
+                        endif; 
+                    ?>
+                    <!-- Image-1 -->
+                    <div class="col-lg-4 col-md-6 grid-item <?php echo $tax ;?>">
+                        <div class="single-portfolio-item ">
+                            
+                            <?php if ( has_post_thumbnail() ) {
+                  the_post_thumbnail( 'post-portfolio', array( 'class'  => 'img-fluid' ) );
+                 } 
+		?>
+                            <div class="overlay text-center">
+                                <div class="content">
+                                    <h3><?php the_title() ; ?></h3>
+                                    <p><?php the_content() ; ?></p>
+                                    <?php $featured_img_url = get_the_post_thumbnail_url($post->ID, 'full'); ?>
+                                    <a href="<?php echo $featured_img_url ; ?>" class="image-link">
+                                        <span class="icon icon-basic-picture-multiple"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+         
+                    <?php   endwhile; ?>
+
+                </div>
+
+            </div>
+        </section>
+        <!-- ==== End Portfolio ==== -->
+
+<?php return ob_get_clean();
+
+});

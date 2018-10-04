@@ -12,3 +12,8 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 
 
 */
+
+
+.vc_col-has-fill > .vc_column-inner, .vc_row-has-fill + .vc_row-full-width + .vc_row > .vc_column_container > .vc_column-inner, .vc_row-has-fill + .vc_row > .vc_column_container > .vc_column-inner, .vc_row-has-fill > .vc_column_container > .vc_column-inner {
+  padding-top: 0!important;
+}
